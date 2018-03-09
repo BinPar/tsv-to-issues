@@ -7,7 +7,6 @@
     "dev": "NODE_ENV=dev babel-node src/index.js",
     "start": "NODE_ENV=production node .compiled/src/index.js",
     "build": "rm -rf .compiled && babel src --out-dir .compiled/src --copy-files",
-    "testWithToken": "npm run dev -- -t 99998ff7b1f4e31a391d795c12dfeec397193b04 -r https://github.com/BinPar/test-to-delete examples/1.tsv",
     "test": "jest",
     "testDev": "jest --watch",
     "testCoverage": "jest --coverage",
