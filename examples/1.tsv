@@ -10,14 +10,14 @@ API - Mutation para la creación de órdenes	Mutation que añade un registro de 
 General - Cambio en órdenes (nueva propiedad “status”)	Introduciendo la creación de órdenes pendientes de ejecutar debemos hacer un cambio en todas las funcionalidades que estén consultando actualmente las órdenes para que, dependiendo del caso, sólo tengan en cuenta las que han sido ejecutadas con éxito (i.e.: cálculo del balance)	mgonand	General	
 Back - Creación de listado de órdenes pendientes de ejecutar	Se creará en el back office una sección dedicada a listar todas las nuevas peticiones de órdenes que el administrador tiene pendientes de ejecutar	mgonand	BackOffice	
 API - Query para listar las órdenes pendientes	Se creará una query para poder listar las órdenes pendientes filtradas, ordenadas y paginadas	mgonand	API	project2
-Back - Marcar orden como ejecutada	Desde la propia tabla se podrá marcar una orden como ejecutada o rechazarla	mgonand	BackOffice	
+Back - Marcar orden como ejecutada	Desde la propia tabla se podrá marcar una orden como ejecutada o rechazarla	mgonand	BackOffice	project2
 General - Creación del email “Cambio de estado orden”		mgonand	General, test2	
 API - Mutation de cambio de estado de orden	Una mutation que cambia el estado de una orden de “pendiente” a “ejecutada” o “rechazada”. Si es rechazada se envía un motivo. En cualquier caso se envía un email indicando si se ha ejecutado o rechazado	mgonand	API	
 Front - Añadir creación de órdenes relatívas a funding de la cuenta	Formulario con la posibilidad de seleccionar si es un ingreso o una retirada. En el caso de ser una retirada se especificará qué moneda queremos retirar y un wallet si procede	mgonand	Front	
 API - Mutation que crea un nuevo movimiento de entrada o salida de moneda	Una mutación que crea una nueva orden. Se añaden a los tipos de órdenes “deposit” y “withdrawal” además de una nueva propiedad opcional “wallet”. El krakenPairId se convierte en opcional porque las acciones de funding no corresponden a ningún par. No se dejan crear movimientos de salida si no tienes la cantidad solicitada de la moneda	mgonand	API	
 API - Revisar y modificar lo necesario en función del cálculo del balance	Con todos los cambios anteriores se debe revisar esta función puesto que es de lo más importante	mgonand	API	
-Front - Listado de movimientos de (entrada salida de moneda a cuenta)	Un listado donde se  muestran todos los movimientos de funding de una cuenta y su estado	mgonand	Front	
-API - Query para consultar las órdenes de funding	Query que consulte mis órdenes de funding (tipos deposit y withdrawal)	mgonand	API	
+Front - Listado de movimientos de (entrada salida de moneda a cuenta)	Un listado donde se  muestran todos los movimientos de funding de una cuenta y su estado	mgonand	Front	project2
+API - Query para consultar las órdenes de funding	Query que consulte mis órdenes de funding (tipos deposit y withdrawal)	mgonand	API	project1
 Back - Listado de operaciones de funding pendientes	Un listado donde se muestren las operaciones de funding pendientes y permite marcarlas como ejecutadas o rechazarlas	mgonand	BackOffice	
-API - Query para consulta de funding admin	Esta query me permite me ver todas si soy admin. Con filtros, orden y paginación	mgonand	API	
+API - Query para consulta de funding admin	Esta query me permite me ver todas si soy admin. Con filtros, orden y paginación	mgonand	API	project1
 Front - Revisión de estilos	Revisar estilos de responsive	mgonand	Front	
