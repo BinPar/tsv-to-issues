@@ -1,0 +1,18 @@
+API - Diseño del modelo de datos	Esta tarea ganará tiempo a medida que se hagan reuniones o se dedique tiempo a diseñar el modelo y a pensar en las decisiones del propio diseño	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación de los tipos de mensajes	Implementar los tipos de mensajes en el log	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación de los tipos de input	Implementar los tipos de inputs que pueden ser mostrados al usuario	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación de los tipos de respuesta de usuario	Implementar los tipos de respuesta derivados de los inputs.	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación de traducción workflow - mensaje	Dado un punto concreto de una conversación, implementar el código necesario para generar el mensaje a transmitir al usuario	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación de persistencia de ficheros e imágenes	Los mensajes con imágenes, tanto de bot como de usuario, los mensajes de firma, los mensajes de desearga de fichero, etc obtendrán la información de la BD. Implementar el código para gestionar la subida de imágenes dentro de un mensaje.	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación funcionalidad respuesta usuario	Implementar la mutación que será ejecutada cuando el usuario pulse el botón enviar de los input.	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación funcionalidad cargar chat	Debe ser posible continuar un chat iniciado con anterioridad	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación funcionalidad iniciar chat	Debe existir una mutación para solicitar a la api los primeros mensajes de una conversacion. Entendemos que estos mensajes siempre serán generados por parte del bot.	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación CRUD de nodos en el workflow	Implementación en graphql del modelo de workflow de nacho	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación modificar posición de Nodo (d&d)	Implementación de la funcionalidad de arrastrar un nodo dentro del editor y soltarlo	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación CRUD de chats	Funcionalidad para crear nuevos chats con un identificador único. ¿Es lo mismo un chat que un workflow?	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación funcionalidad cargar chat	Reconstruir un chat a partir del log de mensajes almacenado.	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación CRUD de usuarios		MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación autenticación y autorización	Soporte a dos tipos de usuarios: Administradores y usuarios. Los segundos aún no tengo claro si disponen de cuenta y login.	MarcosRZ	API	Desarrollo Smartbot	
+API - Implementación del sistema de evaluación del WF	Implementación de la toma de decisiones y acciones a ejecutar para avanzar dentro del flujo de conversacion. Todo lo que sucede desde que se envía un mensaje, hasta que se envía el siguiente.	MarcosRZ	API	Desarrollo Smartbot	
+FRONT - Modificaciones para soportar el modelo de ‘input como mensaje’	Los inputs van a interpretarse como mensajes. El front debe determinar en una primera fase, si lo que está recibiendo es un mensaje de chat, o un input de usuario.	MarcosRZ	Front, Chat	Desarrollo Smartbot	
+FRONT - Cambios en la sincronización de mensajes.	Hasta ahora los mensajes se obtenían mensaje a mensaje mediante una función temporizada. Dado que ahora habrá también inputs en el log, habrá que escribir el código necesario para gestionar estas circunstancias	MarcosRZ	Front, Chat	Desarrollo Smartbot	

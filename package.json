@@ -1,12 +1,15 @@
 {
-  "name": "tsv-to-issues",
+  "name": "@binpar/tsv-to-issues",
   "version": "0.0.1",
   "description": "Tab-separated values to GitHub issues.",
-  "main": "src/index.js",
+  "preferGlobal": true,
+  "bin": {
+    "tsv-to-issues": "dist/index.js"
+  },
   "scripts": {
     "dev": "NODE_ENV=dev babel-node src/index.js",
-    "start": "NODE_ENV=production node .compiled/src/index.js",
-    "build": "rm -rf .compiled && babel src --out-dir .compiled/src --copy-files",
+    "start": "NODE_ENV=production node dist/index.js",
+    "build": "rm -rf dist && babel src --out-dir dist --copy-files",
     "testWithToken": "npm run dev -- -t 99998ff7b1f4e31a391d795c12dfeec397193b04 -r https://github.com/BinPar/test-to-delete examples/1.tsv",
     "test": "jest",
     "testDev": "jest --watch",
