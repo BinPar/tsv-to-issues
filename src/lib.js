@@ -89,12 +89,19 @@ async function createAllLabelsNeeded(gh, labels) {
   if (labels && labels.length > 0) {
     const { data } = await gh.listLabels();
     await Promise.all(
-      labels.filter(label => !data.some(githubLabel => githubLabel.name === label)).map(labelName =>
-        gh.createLabel({
-          name: labelName,
-          color: randomColor().replace('#', ''),
+      labels
+        .filter(
+          label =>
+            !data.some(githubLabel => githubLabel.name.toLowerCase() === label.toLowerCase()),
+        )
+        .map((labelName) => {
+          const l = {
+            name: labelName,
+            color: randomColor().replace('#', ''),
+          };
+          console.log(l);
+          return gh.createLabel(l);
         }),
-      ),
     );
   }
 }
@@ -312,7 +319,11 @@ export default async function processTSVAndCreateIssues({
       try {
         await createProjectCard(issue, issueRes.id, issueRes.number);
       } catch (err) {
-        console.log(chalk.red(`The issue #${issueRes.number} could not be assigned to project ${issue.project}`));
+        console.log(
+          chalk.red(
+            `The issue #${issueRes.number} could not be assigned to project ${issue.project}`,
+          ),
+        );
       }
     } catch (err) {
       console.log(chalk.red(`The issue of line number ${i + 1} could not be created`));

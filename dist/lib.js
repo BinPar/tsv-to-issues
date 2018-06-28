@@ -13,10 +13,12 @@ let createAllLabelsNeeded = (() => {
           return githubLabel.name === label;
         });
       }).map(function (labelName) {
-        return gh.createLabel({
+        const l = {
           name: labelName,
           color: (0, _randomcolor2.default)().replace('#', '')
-        });
+        };
+        console.log(l);
+        return gh.createLabel(l);
       }));
     }
   });

@@ -1,6 +1,6 @@
 {
   "name": "@binpar/tsv-to-issues",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tab-separated values to GitHub issues.",
   "preferGlobal": true,
   "bin": {
