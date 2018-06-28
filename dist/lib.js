@@ -10,15 +10,13 @@ let createAllLabelsNeeded = (() => {
       const { data } = yield gh.listLabels();
       yield Promise.all(labels.filter(function (label) {
         return !data.some(function (githubLabel) {
-          return githubLabel.name === label;
+          return githubLabel.name.toLowerCase() === label.toLowerCase();
         });
       }).map(function (labelName) {
-        const l = {
+        return gh.createLabel({
           name: labelName,
           color: (0, _randomcolor2.default)().replace('#', '')
-        };
-        console.log(l);
-        return gh.createLabel(l);
+        });
       }));
     }
   });

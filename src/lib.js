@@ -94,14 +94,12 @@ async function createAllLabelsNeeded(gh, labels) {
           label =>
             !data.some(githubLabel => githubLabel.name.toLowerCase() === label.toLowerCase()),
         )
-        .map((labelName) => {
-          const l = {
+        .map(labelName =>
+          gh.createLabel({
             name: labelName,
             color: randomColor().replace('#', ''),
-          };
-          console.log(l);
-          return gh.createLabel(l);
-        }),
+          }),
+        ),
     );
   }
 }
